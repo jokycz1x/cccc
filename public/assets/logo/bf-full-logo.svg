@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="200" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .candle-body {
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+
+    #candle1-body {
+      animation: grow-candle 0.4s 0.1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #candle2-body {
+      animation: grow-candle 0.4s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #candle3-body {
+      animation: grow-candle 0.4s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #candle4-body {
+      animation: grow-candle 0.4s 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #candle5-body {
+      animation: grow-candle 0.4s 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #candle6-body {
+      animation: grow-candle 0.4s 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .wick {
+      opacity: 0;
+      animation: fade-in 0.3s 0.7s forwards;
+    }
+
+    #trend-line {
+      stroke-dasharray: 350;
+      stroke-dashoffset: 350;
+      animation: draw-line 1.5s 0.8s ease-out forwards;
+    }
+
+    #text-bond, #text-folio {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fade-in-up 0.5s forwards;
+      filter: url(#goldShadow);
+    }
+
+    #text-bond {
+      animation-delay: 1.4s;
+    }
+
+    #text-folio {
+      animation-delay: 1.6s;
+    }
+
+    #tagline {
+      opacity: 0;
+      animation: fade-in 0.5s 1.8s forwards;
+    }
+
+    #separator {
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: expand-line 0.8s 2s forwards;
+    }
+
+    .grid-lines {
+      opacity: 0;
+      animation: fade-in 0.5s ease-out forwards;
+    }
+
+    @keyframes grow-candle {
+      from { transform: scaleY(0); }
+      to { transform: scaleY(1); }
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes draw-line {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes expand-line {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+    
+    .gold-outline {
+      stroke: #b18b27;
+      stroke-width: 0.5;
+      fill: none;
+    }
+    
+    .shimmer {
+      animation: goldShimmer 4s infinite linear;
+    }
+    
+    @keyframes goldShimmer {
+      0% {
+        background-position: -100% 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+  </style>
+
+  <!-- Pozadí -->
+  <rect width="500" height="200" rx="8" fill="#FFFFFF"/>
+
+  <!-- Grid Lines -->
+  <g class="grid-lines" opacity="0.1">
+    <line x1="0" y1="50" x2="500" y2="50" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="500" y2="100" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="500" y2="150" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="200" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="200" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="200" stroke="#b18b27" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="200" stroke="#b18b27" stroke-width="0.5"/>
+  </g>
+
+  <!-- Chart Area -->
+  <g transform="translate(60, 40)">
+    <!-- Chart Border -->
+    <rect x="0" y="0" width="220" height="120" stroke="#b18b27" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+
+    <!-- Candles with enhanced look -->
+    <g>
+      <!-- Candle 1 -->
+      <rect id="candle1-body" class="candle-body" x="15" y="90" width="12" height="20" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="21" y1="87" x2="21" y2="90" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="21" y1="110" x2="21" y2="113" stroke="#b18b27" stroke-width="1"/>
+
+      <!-- Candle 2 -->
+      <rect id="candle2-body" class="candle-body" x="50" y="75" width="12" height="35" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="56" y1="71" x2="56" y2="75" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="56" y1="110" x2="56" y2="114" stroke="#b18b27" stroke-width="1"/>
+
+      <!-- Candle 3 -->
+      <rect id="candle3-body" class="candle-body" x="85" y="80" width="12" height="30" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="91" y1="76" x2="91" y2="80" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="91" y1="110" x2="91" y2="114" stroke="#b18b27" stroke-width="1"/>
+
+      <!-- Candle 4 -->
+      <rect id="candle4-body" class="candle-body" x="120" y="60" width="12" height="50" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="126" y1="56" x2="126" y2="60" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="126" y1="110" x2="126" y2="114" stroke="#b18b27" stroke-width="1"/>
+
+      <!-- Candle 5 -->
+      <rect id="candle5-body" class="candle-body" x="155" y="45" width="12" height="65" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="161" y1="41" x2="161" y2="45" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="161" y1="110" x2="161" y2="114" stroke="#b18b27" stroke-width="1"/>
+
+      <!-- Candle 6 -->
+      <rect id="candle6-body" class="candle-body" x="190" y="30" width="12" height="80" rx="1" fill="url(#candle-gradient)"/>
+      <line class="wick" x1="196" y1="26" x2="196" y2="30" stroke="#b18b27" stroke-width="1"/>
+      <line class="wick" x1="196" y1="110" x2="196" y2="114" stroke="#b18b27" stroke-width="1"/>
+    </g>
+
+    <!-- Trend Line -->
+    <path id="trend-line" d="M21 100C40 95 56 92 91 85C126 75 161 62 196 40" stroke="url(#trend-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Price labels -->
+    <text x="-10" y="30" fill="#b18b27" font-family="Inter, sans-serif" font-size="10">1250</text>
+    <text x="-10" y="70" fill="#b18b27" font-family="Inter, sans-serif" font-size="10">1000</text>
+    <text x="-10" y="110" fill="#b18b27" font-family="Inter, sans-serif" font-size="10">750</text>
+
+    <!-- Time labels -->
+    <text x="21" y="130" fill="#b18b27" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Q1</text>
+    <text x="91" y="130" fill="#b18b27" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Q2</text>
+    <text x="161" y="130" fill="#b18b27" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Q3</text>
+  </g>
+
+  <!-- Text Logo Section -->
+  <g transform="translate(310, 85)">
+    <!-- Brand Name -->
+    <g>
+      <path id="text-bond" class="gold-outline" d="M0 0H18.5C24.5 0 29.333 1.33333 33 4C36.667 6.66667 38.5 10.8333 38.5 16.5C38.5 22.1667 36.667 26.3333 33 29C29.333 31.6667 24.5 33 18.5 33H10V52H0V0ZM18 24C21 24 23.25 23.25 24.75 21.75C26.25 20.25 27 18.1667 27 15.5C27 12.8333 26.25 10.75 24.75 9.25C23.25 7.75 21 7 18 7H10V24H18Z" fill="#b18b27"/>
+      <path id="text-folio" class="gold-outline" d="M44 0H54V17.5H74V0H84V52H74V26.5H54V52H44V0ZM116 0V9H99V21H113V30H99V43H116V52H89V0H116ZM133 0H143V43H164V52H133V0ZM172 0H182V17.5H202V0H212V52H202V26.5H182V52H172V0ZM225 0H250.5C256.5 0 261.167 1.66667 264.5 5C267.833 8.33333 269.5 12.6667 269.5 18C269.5 23.3333 267.833 27.6667 264.5 31C261.167 34.3333 256.5 36 250.5 36H235V52H225V0ZM250 27C252.667 27 254.75 26.25 256.25 24.75C257.75 23.25 258.5 21 258.5 18C258.5 15 257.75 12.75 256.25 11.25C254.75 9.75 252.667 9 250 9H235V27H250Z" fill="#ffc940"/>
+    </g>
+
+    <!-- Tagline -->
+    <text id="tagline" x="0" y="65" fill="#b18b27" font-family="Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="2">INVESTIČNÍ PLATFORMA</text>
+
+    <!-- Separator Line -->
+    <rect id="separator" x="0" y="75" width="180" height="4" rx="2" fill="url(#separator-gradient)"/>
+  </g>
+
+  <!-- Gradienty -->
+  <defs>
+    <linearGradient id="candle-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc940"/>
+      <stop offset="1" stop-color="#b18b27"/>
+    </linearGradient>
+
+    <linearGradient id="trend-gradient" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b18b27"/>
+      <stop offset="1" stop-color="#ffc940"/>
+    </linearGradient>
+
+    <linearGradient id="separator-gradient" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc940"/>
+      <stop offset="1" stop-color="#b18b27"/>
+    </linearGradient>
+    
+    <filter id="goldShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#b18b27" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+</svg>

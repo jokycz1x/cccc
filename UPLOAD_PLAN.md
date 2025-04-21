@@ -11,33 +11,35 @@
 ### 1. Nahrání adresáře app
 - [x] Nahrát základní strukturu app/api
 - [x] Nahrát základní strukturu app/[locale]
-- [ ] Nahrát app/auth
-- [ ] Nahrát app/dashboard
-- [ ] Nahrát app/listings
-- [ ] Nahrát app/portfolio
-- [ ] Nahrát ostatní soubory v app
+- [x] Nahrát app/auth
+- [x] Nahrát app/dashboard
+- [x] Nahrát app/listings
+- [x] Nahrát app/portfolio
+- [x] Nahrát ostatní soubory v app
 
 ### 2. Nahrání adresáře components
 - [x] Nahrát základní komponenty (Header, Footer)
-- [ ] Nahrát ostatní komponenty
-- [ ] Nahrát testy komponent
+- [x] Nahrát další klíčové komponenty (BondForm, OrderForm, PortfolioBonds, SessionProvider, TranslationProvider)
+- [x] Nahrát testy komponent (BondForm.test.tsx, Footer.test.tsx, Header.test.tsx)
 
 ### 3. Nahrání adresáře lib
 - [x] Nahrát lib/auth.ts
 - [x] Nahrát základní strukturu lib/supabase
 - [x] Nahrát základní strukturu lib/i18n
-- [ ] Nahrát ostatní soubory v lib
+- [x] Nahrát další klíčové soubory (mongodb.ts, email.ts, utils.ts)
+- [x] Nahrát testy lib (auth.test.ts, i18n.test.ts, supabase.test.ts)
 
 ### 4. Nahrání adresáře public
 - [x] Vytvořit základní strukturu public/assets
 - [x] Vytvořit základní strukturu public/images
 - [x] Vytvořit základní strukturu public/flags
-- [ ] Nahrát ostatní soubory v public
+- [x] Nahrát další soubory v public (flags/de.svg, flags/us.svg, assets/logo/bf-full-logo.svg, images/bond-illustration.svg)
 
 ### 5. Nahrání ostatních souborů
 - [x] Nahrát základní SQL skripty
-- [ ] Nahrát další konfigurační soubory
-- [ ] Nahrát dokumentaci
+- [x] Nahrát další SQL skripty (supabase-schema.sql, create_orders_function.sql)
+- [x] Nahrát konfigurační soubory (tailwind.config.js, postcss.config.js, middleware.ts)
+- [x] Nahrát dokumentaci (docs/pdf-upload-solution.md, docs/supabase-migrace.md)
 
 ### 6. Finalizace
 - [ ] Commitnout všechny změny
