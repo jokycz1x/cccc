@@ -9,8 +9,8 @@
 ## Plán dalších kroků
 
 ### 1. Nahrání adresáře app
-- [ ] Nahrát app/api
-- [ ] Nahrát app/[locale]
+- [x] Nahrát základní strukturu app/api
+- [x] Nahrát základní strukturu app/[locale]
 - [ ] Nahrát app/auth
 - [ ] Nahrát app/dashboard
 - [ ] Nahrát app/listings
@@ -18,27 +18,30 @@
 - [ ] Nahrát ostatní soubory v app
 
 ### 2. Nahrání adresáře components
-- [ ] Nahrát všechny komponenty
+- [x] Nahrát základní komponenty (Header, Footer)
+- [ ] Nahrát ostatní komponenty
 - [ ] Nahrát testy komponent
 
 ### 3. Nahrání adresáře lib
-- [ ] Nahrát lib/auth.ts
-- [ ] Nahrát lib/supabase
-- [ ] Nahrát lib/i18n
+- [x] Nahrát lib/auth.ts
+- [x] Nahrát základní strukturu lib/supabase
+- [x] Nahrát základní strukturu lib/i18n
 - [ ] Nahrát ostatní soubory v lib
 
 ### 4. Nahrání adresáře public
-- [ ] Nahrát public/assets
-- [ ] Nahrát public/images
-- [ ] Nahrát public/flags
+- [x] Vytvořit základní strukturu public/assets
+- [x] Vytvořit základní strukturu public/images
+- [x] Vytvořit základní strukturu public/flags
 - [ ] Nahrát ostatní soubory v public
 
 ### 5. Nahrání ostatních souborů
-- [ ] Nahrát SQL skripty
-- [ ] Nahrát konfigurační soubory
+- [x] Nahrát základní SQL skripty
+- [ ] Nahrát další konfigurační soubory
 - [ ] Nahrát dokumentaci
 
 ### 6. Finalizace
+- [ ] Commitnout všechny změny
+- [ ] Pushnout změny na GitHub
 - [ ] Vytvořit pull request z větve `upload-files` do `main`
 - [ ] Zkontrolovat, že všechny soubory byly správně nahrány
 - [ ] Sloučit pull request
