@@ -42,8 +42,8 @@
 - [x] Nahrát dokumentaci (docs/pdf-upload-solution.md, docs/supabase-migrace.md)
 
 ### 6. Finalizace
-- [ ] Commitnout všechny změny
-- [ ] Pushnout změny na GitHub
+- [x] Commitnout všechny změny
+- [x] Pushnout změny na GitHub
 - [ ] Vytvořit pull request z větve `upload-files` do `main`
 - [ ] Zkontrolovat, že všechny soubory byly správně nahrány
 - [ ] Sloučit pull request
