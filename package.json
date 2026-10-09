@@ -34,7 +34,7 @@
     "mongodb": "^6.0.0",
     "mongodb-memory-server": "^9.1.1",
     "mongoose": "^8.0.0",
-    "next": "^14.0.0",
+    "next": "^16.4.0",
     "next-auth": "^4.24.5",
     "next-i18next": "^15.4.2",
     "next-intl": "^3.26.5",
